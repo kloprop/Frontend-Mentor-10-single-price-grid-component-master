@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --clr-primary: hsl(179, 62%, 43%);
+  --clr-secondary: hsla(179, 62%, 43%, 0.727);
+  --clr-text: hsl(218, 22%, 67%);
+  --clr-accent: hsl(71, 73%, 54%);
+  --clr-background: hsl(204, 43%, 93%);
+}
+body {
+  font-family: "Karla", sans-serif;
+  background-color: var(--clr-background);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+  color: var(--clr-text);
+  font-size: 0.9rem;
+}
+a {
+  text-decoration: 0;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+h1,
+h2,
+h3 {
+  margin-block-start: 0;
+}
+h1 {
+  font-size: 1.2rem;
+  color: var(--clr-primary);
+}
+h2 {
+  font-size: 1rem;
+  margin-block-end: 0.5rem;
+  color: rgba(256, 256, 256, 0.9);
+}
+.promotion__body,
+.promotion__header,
+.promotion__footer {
+  padding: 1.5rem;
+}
+.grid {
+  display: grid;
+}
+.flex-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.promotion {
+  width: 320px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.promotion__header h2 {
+  color: var(--clr-accent);
+}
+.promotion__body {
+  background-color: var(--clr-primary);
+  color: white;
+  color: clr;
+}
+.price {
+  font-size: 2rem;
+}
+.pricing + p {
+  opacity: 0.7;
+  margin-block-start: 0;
+}
+.period {
+  opacity: 0.5;
+}
+.btn {
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.btn--accent {
+  background-color: var(--clr-accent);
+  color: white;
+}
+.btn--accent:hover {
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+.btn--block {
+  display: inline-block;
+  width: 100%;
+  padding: 1rem 5rem;
+}
+.promotion__footer {
+  background-color: var(--clr-secondary);
+  color: rgba(256, 256, 256, 0.6);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  .promotion {
+    min-width: 600px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .promotion__header {
+    grid-column: 1 / span2;
+  }
+}
